@@ -1,0 +1,607 @@
+@charset "utf-8";
+
+
+body{background-color:#131313;overflow-x: hidden;font-family:Verdana, Geneva, sans-serif;color:#E1E1E1;margin:0;padding:0;}html,body{height:100%;}html{min-width:1000px;}
+header,section,article,aside,nav,figure,footer{display:block;}abbr{border-bottom:1px dashed #0187AC;color:#0187AC;cursor:default;}h1{font-size:22px;}h2{font-size:20px;}h3{font-size:18px;}h4{font-size:16px;}h5{font-size:14px;}h6{font-size:12px;}a img{border:none;}a:link{color:#0187AC;}a:visited{color:#B1032F;}a:hover{color:#01B3E4;}a:active{color:#016F8E;}textarea{resize:none;}.clear{clear:both;height:0;display:block;}address p,p,ul,ol{font-size:13px;}ul li,ol li,p{line-height:1.8em;}a,input,textarea{outline:none;}
+/*
+Layout
+-----------------------------------------------------------------------------------------
+*/
+#wrapper{min-height:100%;height:auto !important;}#header{width:100%;height:70px;background:#101010;margin:0;padding:0;}div.nav-outside{background:#101010;height:70px;}div.header-inner{width:960px;position:relative;margin:0 auto;padding:0;}div.logo{width:321px;position:absolute;left:0;top:5px;text-indent:0 9999px;margin:0;padding:0;}div.logo h1{margin:0;padding:0;}div.logo h1 a{display:block;position:relative;z-index:3;text-indent:-9999px;background:url(../img/logo.png) no-repeat;height:57px;width:321px;}
+/*
+slider
+-----------------------------------------------------------------------------------------
+*/
+#banner{background:url(../img/banner-bg.png);height:475px;width:100%;margin:0 auto;padding:0;}#banner-2{background:url(http://mmdevdesign.eu/old_winner/img/banner-bg-2.png) repeat-x;height:326px;width:100%;margin:0 auto;padding:0;}.banner-inside{background:url(http://mmdevdesign.eu/old_winner/img/header-bg.jpg) no-repeat 0 0;height:260px;width:960px;position:relative;margin:0 auto;padding:0;}.breadcrumb{position:absolute;top:280px;left:0;font-size:14px;}#banner:after,#header:after{content:"";clear:both;display:block;}.banner-inner{width:960px;height:436px;margin:0 auto;padding:0;}.banner-left{width:460px;margin-top:40px;float:left;}.banner-left h2{text-align:center;}.color{color:#00272F;}.banner-left p{font-size:14px;font-weight:700;text-align:justify;}.button{display:block;margin-top:25px;margin-left:70px;}p.text{font-size:13px;color:#C7C7C7;}.button a{display:block;background:url(../img/buttons.png) no-repeat;height:47px;width:272px;color:#EFEFEF;text-decoration:none;line-height:2.8em;text-align:center;}.button a:hover{background-position:0 -50px;}#slider-bg{background:url(../img/banner.png) no-repeat;height:384px;width:475px;position:relative;top:60px;margin-left:485px;}div.quote-top{position:relative;width:960px;height:250px;margin:0;padding:0;}div.quote-top h2{margin:0;padding:0;}.quote-top h2{background:url(http://mmdevdesign.eu/old_winner/img/quote-bottom.png) no-repeat right 80%;font-family:"Times New Roman", Georgia, Times, serif;position:relative;top:18px;font-size:30px;font-style:italic;display:block;height:250px;width:960px;padding:0 30px;}.next-line{padding-left:300px;padding-top:10px;display:block;width:960px;}.author{text-align:right;font-family:Georgia, "Times New Roman", Times, serif;font-style:italic;font-size:13px;margin-right:60px !important;position:absolute;bottom:30px;right:18px;}.quote-bottom{background:url(http://mmdevdesign.eu/old_winner/img/quote-top.png) no-repeat left 5%;display:block;height:250px;padding-top:70px;text-indent:30px;}
+/*
+nivo-slider
+-------------------------------------------------------------------------------------------
+*/
+.nivoSlider{background:#000 url(../img/loading10.gif) no-repeat 50% 50%;position:relative;top:17px;left:19px;height:247px;width:438px;}.nivoSlider img{position:absolute;top:0;height:247px;width:438px;left:0;}.nivoSlider a.nivo-imageLink{position:absolute;top:0;left:0;width:100%;height:100%;border:0;z-index:6;display:none;margin:0;padding:0;}.nivo-slice{display:block;position:absolute;z-index:5;height:100%;}.nivo-box{display:block;position:absolute;z-index:5;}.nivo-caption{position:absolute;left:0;bottom:0;background:#000;color:#fff;opacity:0.8px;width:100%;z-index:8;}.nivo-caption p{margin:0;padding:5px;}.nivo-caption a{display:inline !important;}.nivo-html-caption{display:none;}.nivo-controlNav{position:absolute;top:50%;}.nivo-controlNav a{position:relative;top:155px;left:170px;background:url(http://mmdevdesign.eu/old_winner/img/bullets.png) no-repeat 0 -19px;height:19px;width:18px;float:left;margin-left:5px;text-indent:-9999px;display:block;z-index:9;cursor:pointer;}.nivo-controlNav a.active{background-position:0 0;}
+
+/*
+navigation
+-----------------------------------------------------------------------------------------
+*/
+nav#navigation{position:relative;width:960px;overflow:hidden;height:70px;margin:0;padding:0;}nav#navigation ul{list-style:none;position:absolute;right:0;top:25px;margin:0;padding:0;}nav#navigation ul li{display:block;float:left;line-height:2.8em;height:35px;}nav#navigation ul li a{float:left;line-height:2.7em;display:block;height:35px;font-weight:700;color:#EFEFEF;text-decoration:none;padding:0 1.8em;}
+nav#navigation ul li a:hover{
+	color: #98032F;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.hover{
+    background: url(../img/top-nav-hover.png) repeat-x;
+}
+/*
+content
+--------------------------------------------------------------------------
+*/
+#main-content{
+   width: 960px;
+   margin: 35px auto;
+   padding: 0;
+}
+.color-blue{
+   color: #0187AC;
+   font-family: "Times New Roman", Georgia,  Times, serif;
+   font-size: 21px;
+}
+/*
+SKILLS
+---------------------------------------------------------------------------------------------------------------------------------
+*/
+.skills{
+	margin: 0;
+	width: 336px;
+	float: left;
+}
+.skills h3{
+	margin: 0 0 25px 0;
+	padding: 0;
+}
+.skills:after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+#html, #css, #jquery, #php{
+	position: relative;
+	display: block;
+	width: 336px;
+	height: 68px;
+	margin: 18px 0;
+	text-indent: -9999px;
+}
+#html{
+	background: url(../img/html.png) no-repeat 0 0;
+	width: 336px;
+	height: 65px;
+}
+#html span.hover_slow{
+	background: url(../img/html.png) no-repeat 0 -69px;
+	width: 336px;
+	height: 68px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#css{
+	background: url(../img/css.png) no-repeat 0 0;
+}
+#css span.hover_slow{
+	background: url(../img/css.png) no-repeat 0 -68px;
+	width: 336px;
+	height: 68px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#jquery{
+	background: url(../img/jquery.png) no-repeat 0 0;
+}
+#jquery span.hover_slow{
+	background: url(../img/jquery.png) no-repeat 0 -69px;
+	width: 336px;
+	height: 68px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#php{
+	background: url(../img/php.png) no-repeat 0 0;
+}
+#php span.hover_slow{
+	background: url(../img/php.png) no-repeat 0 -66px;
+	width: 336px;
+	height: 68px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.bgColor{
+	position: relative;
+	display: block;
+	width: 336px;
+	height: 64px;
+}
+/*
+RIGHT_COLUMN
+-------------------------------------------------------------------------------------------------------------------------------------
+*/
+.right-column{
+	width: 580px;
+	margin-left: 380px;
+}
+p.more a{
+	float: right;
+	font-weight: bold;
+	display: inline-block;
+}
+.question{
+	margin: 50px 0;
+}
+.tooltip{
+	display: none;
+	position: absolute;
+	background: #050505;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFF;
+	padding: 5px 8px;
+}
+/*
+PROJECTS
+------------------------------------------------------------------------------------------------------------------------------------------
+*/
+.projects{
+	background: url(../img/slider-bg.png) no-repeat;
+	overflow: hidden;
+	position: relative;
+	width: 960px;
+	height: 210px;
+}
+.margin-bottom{
+    margin-bottom: 30px;
+}
+.padding{
+    padding: 30px 0;
+}
+.scrollable .items{width:20000em;position:absolute;clear:both;}.items div{float:left;width:900px;}.scrollable{position:relative;overflow:hidden;width:900px;height:160px;margin:0 auto;padding:0;}.scrollable a img{float:left;width:250px;height:150px;margin:0 0 20px 37px;}.scrollable a img:hover{-webkit-transition:all 0.5s;-moz-transition:all 0.5s;transition:all 0.5s;}.scrollable .active{position:relative;cursor:default;}a.browse{display:block;width:38px;height:42px;float:left;cursor:pointer;font-size:1px;z-index:1000;top:50px;margin:40px 10px;}a.right,a.left{position:absolute;top:43px;}a.right{background:url(../img/next.png) no-repeat 0 0;clear:right;right:-29px;}a.left{background:url(.../img/prev.png) no-repeat 0 0;left:-8px;}.portfolio-inner p img{float:left;width:250px;height:160px;}.portfolio-inner p{margin:0;padding:0;}.hover-img{float:left;position:relative;width:250px;height:206px;padding:0 18px 18px 0 !important;}.hover-img img{position:absolute;top:0;left:0;width:250px;height:206px;}.hover-img:after{cotent:"";height:0;clear:both;display:block;}.portfolio-inner{margin-bottom:10px;cursor:default;position:relative;padding:10px 10px 30px 0;}.h5_hover{background:#131313;}.portfolio-inner h5{background:#050505;display:inline-block;margin:0 0 5px;padding:5px 10px;}a.right:hover,a.left:hover{background-position:0 -45px;}
+.portfolio-inner:hover{
+    background: #050505;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.portfolio:after, .portfolio-inner:after{
+    content: "";
+    clear: both;
+    height: 0;
+    display: block;
+}
+.center{
+    display: block;
+    font-family: "Times New Roman", Georgia,  Times, serif;
+    font-size: 22px;
+}
+.button-portfolio a{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: right;
+    font-size: 13px;
+    color: #0187AC;
+    padding: 5px 18px;
+}
+.button-portfolio a:hover{
+    background: #B1032F;
+	color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.photoshop-skills, .illustrator-skills, .aptana-skills, .html5, .css3, .jquery-skills{
+    width: 960px;
+	margin: 0 0 35px 0;
+}
+.photoshop-skills a, .illustrator-skills a, .aptana-skills a, .html5 a, .css3 a, .jquery-skills a{
+    float: left;
+}
+.photoshop-skills:after, .illustrator-skills:after, .aptana-skills:after, .html5:after, .css3:after, .jquery-skills:after{
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+}
+#ps, #ai, #aptana{
+	display: block;
+	position: relative;
+	width: 110px;
+	height: 130px;
+	margin: 0;
+	padding: 0 10px;
+	text-indent: -9999px;
+}
+#html5, #css3{
+	display: block;
+	position: relative;
+	width: 80px;
+	height: 130px;
+	margin: 0;
+	padding: 0 10px;
+	text-indent: -9999px;
+}
+#jquery-skills{
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0 10px;
+	text-indent: -9999px;
+	width: 249px;
+	height: 126px;
+}
+#jquery-skills{
+	background: url(http://mmdevdesign.eu/old_winner/img/jquery-skills.png) no-repeat 0 0;
+}
+#ps{
+	background: url(http://mmdevdesign.eu/old_winner/img/ps.png) no-repeat 0 0;
+}
+#html5{
+	background: url(http://mmdevdesign.eu/old_winner/img/htmt5.png) no-repeat 0 0;
+}
+#css3{
+	background: url(http://mmdevdesign.eu/old_winner/img/css3.png) no-repeat 0 0;
+}
+#ai{
+	background: url(http://mmdevdesign.eu/old_winner/img/illustrator.png) no-repeat 0 0;
+}
+#aptana{
+	background: url(http://mmdevdesign.eu/old_winner/img/aptana.png) no-repeat 0 0;
+}
+#ps span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/ps.png) no-repeat 0 -133px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 150px;
+}
+#ai span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/illustrator.png) no-repeat 0 -133px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 150px;
+}
+#aptana span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/aptana.png) no-repeat 0 -133px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 150px;
+}
+#html5 span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/htmt5.png) no-repeat 0 -134px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 150px;
+}
+#jquery-skills span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/jquery-skills.png) no-repeat 0 -135px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 249px;
+	height: 126px;
+}
+#css3 span.hover_slow{
+	background: url(http://mmdevdesign.eu/old_winner/img/css3.png) no-repeat 0 -134px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 150px;
+}
+/*
+CONTACTS
+-------------------------------------------------------------------------------------------------------------------------------
+*/
+.contacts{
+	background: url(http://mmdevdesign.eu/old_winner/img/bg-form.png) no-repeat;
+	width: 510px;
+	height: 690px;
+	padding: 30px;
+	float: left;
+	position: relative;
+}
+#form{
+	margin-left: 50px;
+	position: relative;
+	width: 400px;
+}
+.contacts-right{
+	width: 350px;
+	float: right;
+	height: 500px;
+}
+.contacts:after, .contacts-right:after{
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+}
+.name:after, .email:after, .text:after, .text_in_message:after{
+	content: ":";
+}
+.name, .email, .text, .text_in_message{
+	font-weight: bold;
+}
+input[type="text"], input[type="email"]{
+	background: url(../img/input.png) no-repeat;
+	height: 18px;
+	padding: 8px 10px;
+	width: 280px;
+}
+textarea{
+	background: url(http://mmdevdesign.eu/old_winner/img/textarea.png) no-repeat;
+	width: 308px;
+	padding: 10px;
+	height: 130px;
+	overflow: hidden;
+}
+input[type="text"], input[type="email"], textarea{
+	color: #fff;
+	border: none;
+}
+#reset, #submit{
+	background: #282828;
+	box-shadow: 0 3px 3px #000;
+	position: relative;
+	left: 50px;
+	top: 5px;
+	display: block;
+	padding: 0;
+	line-height: 2em;
+	width: 127px;
+	height: 33px;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	border: none;
+	margin: 0 0 0 10px;
+	cursor: pointer;
+}
+#reset:active, #submit:active{
+	background: #3E3E3E;
+}
+address p{
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+a[href="mailto:mwxood@gmail.com"], a[href="mailto:info@mmdevdesign.eu"]{
+	margin: 0 5px;
+}
+/*
+BLOG
+---------------------------------------------------------------------------------------
+*/
+
+.pagination{
+	margin-left: 25px;
+}
+.pagination a{
+	background: #035883;
+	color: #fff;
+	border: 1px solid #023751;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.pagination a:hover{
+	background: #B1032F;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.pagination, .ditto_curentpage{
+	background: #035883;
+	color: #fff;
+	border: 1px solid #023751;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.post-info{
+	margin-top: 3px;
+}
+.post-info a:link, .post .post-info a:visited{
+	color: #B1032F;
+	border: none;
+}
+.post-info{
+	margin-top: 7px;
+	background: url(http://mmdevdesign.eu/old_winner/img/tag.png) no-repeat left 5px;
+	padding-left: 23px;
+}
+.post .post-info a:hover{
+	background: #035883;
+	color: #fff;
+}
+aside#sidebar{
+	float: left;
+	width: 200px;
+}
+#blog-content{
+	width: 740px;
+	margin-left: 218px;
+}
+.sidebar-menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 10px;
+}
+.sidebar-menu ul li{
+	display: block;
+	padding: 0;
+	margin: 8px 0;
+	border-bottom: 1px dotted #ccc;
+}
+.sidebar-menu ul li a{
+	display: block;
+	margin: 0 0 5px 0;
+	padding: 5px 0 0 5px;
+	line-height: 1.8em;
+	text-decoration: none;
+}
+.block, .block_2{
+	margin: 30px 0;
+	position: relative;
+}
+.sidebar-menu ul li a:hover{
+	background: #B1032F;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+ul.subscribe-stuff{list-style: none; margin: 0 0 0 13px; padding: 0;}
+ul.subscribe-stuff li{float: left; padding: 0 5px;}
+.tagcloud{padding: 0 10px; margin: 0;}
+.tagcloud a{color: #B1032F; padding: 3px; margin: 1px;}
+.tagcloud a:hover{text-decoration: none; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+.tagcloud .s5{font-size: 18px;}
+.tagcloud .s4{font-size: 17px;}
+.tagcloud .s3{font-size: 16px;}
+.tagcloud .s2{font-size: 14px;}
+.tagcloud .s1{font-size: 13px;}
+.tagcloud .s1, a.tagcloud .s2, .tagcloud .s3, .tagcloud .s4, .tagcloud .s5{
+	margin: 0 0 2px 0;
+	display: inline;
+}
+.right{
+	width: 558px;
+	float: left;
+	padding: 0 10px;
+	margin: 0 0 5px 0;
+}
+.left{
+	width: 150px;
+	float: right;
+}
+.left ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.left ul li.user{
+	background: url(http://mmdevdesign.eu/old_winner/img/user.png) no-repeat left 2px;
+	padding-left: 21px;
+}
+.left ul li.comment{
+	background: url(http://mmdevdesign.eu/old_winner/img/comment.png) no-repeat left 5px;
+	padding-left: 21px;
+}
+.left ul li.time{
+	background: url(http://mmdevdesign.eu/old_winner/img/date.png) no-repeat left 3px;
+	padding-left: 21px;
+}
+.post{
+	margin: 10px 0 18px 0;
+	overflow: hidden;
+	cursor: default;
+	}
+.post:hover{
+	background: #050505;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.blog_content:after{
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+}
+.csswinner{
+	position:absolute;
+	top: 130px;
+	right:0px;
+	z-index:999;
+}
+.csswinner a{
+	width:81px;
+	height:59px;
+	text-indent:-9000px;
+	display:block;
+	background:url(http://mmdevdesign.eu/old_winner/img/nominee-grey-right.png) no-repeat;
+}
+.cssreel{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 116px;
+	height: 115px;
+}
+.awards{
+	position: absolute;
+	top: 210px;
+	right: 0;
+	width: 73px;
+	height: 38px;
+}
+.awards a{
+	width:73px;
+	height:38px;
+	text-indent:-9000px;
+	display:block;
+	background:url(http://mmdevdesign.eu/old_winner/img/mediumSOTDBlue.png) no-repeat;
+}
+.cssreel a{
+	background: url(http://mmdevdesign.eu/old_winner/img/css_nomineetag_black.png) no-repeat;
+	width: 116px;
+	height: 115px;
+	text-indent: -9999px;
+	display: block;
+}
+/*
+FOOTER
+--------------------------------------------------------------------------------------------------------------------------------
+ */
+ footer#footer-bg{background:url(http://mmdevdesign.eu/old_winner/img/footer-bg.png) repeat-x 0 0;clear:both;width:100%;height:130px;margin-top:100px;}.footer-bg-inner{width:960px;position:relative;margin:0 auto;padding:0;}.copyright{position:absolute;height:13px;top:18px;left:0;}.copyright p{color:#131313;font-weight:700;text-shadow:0 1px 0 #3E3E3E;height:13px;width:401px;}ul.footer-nav{margin-top:35px;list-style:none;width:486px;position:absolute;right:0;}ul.footer-nav li{float:left;display:block;height:25px;}ul.footer-nav li a{float:left;display:block;font-weight:700;height:25px;color:#B1032F;padding:0 1.3em;}.social{position:absolute;top:70px;}.facebook,.google,.twitter{float:left;}.facebook a,.google a,.twitter a{display:block;text-indent:-9999px;position:relative;width:40px;height:41px;float:left;margin:0 .5em;}.facebook a{background:url(http://mmdevdesign.eu/old_winner/img/facebook.png) no-repeat 0 0;}.google a{background:url(http://mmdevdesign.eu/old_winner/img/google.png) no-repeat 0 0;}.twitter a{background:url(http://mmdevdesign.eu/old_winner/img/twitter.png) no-repeat 0 0;}#facebook span.hover_slow{background:url(http://mmdevdesign.eu/old_winner/img/facebook.png) no-repeat 0 -42px;width:40px;height:41px;display:block;position:absolute;top:0;left:0;}#google span.hover_slow{background:url(http://mmdevdesign.eu/old_winner/img/google.png) no-repeat 0 -42px;width:40px;height:41px;display:block;position:absolute;top:0;left:0;}#twitter span.hover_slow{background:url(http://mmdevdesign.eu/old_winner/img/twitter.png) no-repeat 0 -42px;width:40px;height:41px;display:block;position:absolute;top:0;left:0;}
+ul.footer-nav li a:hover{
+    background: #B1032F;
+    color: #121212;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
